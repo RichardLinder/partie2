@@ -12,39 +12,10 @@ de validation (submit).</P>
 <h2>Resultat</h2>
 <!-- balise php -->
 <?php
-
-$texte 
+include_once './function.php';
+$texte ;
 
 $role=["Développeur Logiciel ", "Designer web" , "Intégrateur" , "Chef de projet"];
 
-function afficherRadio($tableau) 
-{
-    
-?><form>
-    <fieldset>
-      <legend>Choix parmi les proposition suivante:</legend><?php
-        foreach ($tableau as $key  ) 
-        {
-            ?>
-            <div>
-              <input type="radio"  id="<?php echo $key?>" name="<?php echo $key?>" value="<?php echo $key?>"<?php
-                    if( $i<1 ) 
-                    {
-                          echo "checked";                
-                    }; ?>
-                      >
-                        <label for="<?php echo $key;?>"><?php echo $key;?></label>
-              </div> 
-          <?php $i++;
-                  
-        };?>
-    
-
-      </fieldset>
-    </form>
-    <input type="submit" value="Envoyer le formulaire">
-
-      <?php
-};
 
 afficherRadio($role);
