@@ -13,7 +13,7 @@ function formulaire( $tableau ,$titre="formulaire", $post=true )
 {
     // balise form
     ?> 
-    <form action=,
+    <form action=, method="post">
 
     <?php    
     // insertion du titre 
@@ -21,19 +21,19 @@ function formulaire( $tableau ,$titre="formulaire", $post=true )
      echo $titre 
      
     //  htlm de la metode
-     ?>
+     
 
-    method=""
+    // method="post">
     
-    <?php
-    // insertion métode
-     if($post==true)
-    {
-        echo"post>";
-    }
-    else{
-        echo"get>";
-    }
+    
+    // insertion métode  ( pas ok  suprimé)
+    //  if($post==true)
+    // {
+    //     echo"post>";
+    // }
+    // else{
+    //     echo"get>";
+    // }
 
     // lecture du tableau  pour inseré les valeur 
     foreach ($tableau as $key ) 
